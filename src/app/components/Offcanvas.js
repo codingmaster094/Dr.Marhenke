@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function OffCanvas() {
   const [isOpen, setIsOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const pathname = usePathname();
   return (
     <>
       <button
@@ -72,13 +74,36 @@ export default function OffCanvas() {
         <nav className="p-4 space-y-3 uppercase text-black text-opacity-65">
           <ul>
             <li>
-              <Link href="/" className="block py-2 hover:text-yellow">
+              <Link
+                href="/"
+                className={
+                  pathname === "/"
+                    ? "text-yellow block py-2 hover:text-yellow"
+                    : ""
+                }
+                onClick={() => setIsOpen(false)}
+              >
                 START
               </Link>
             </li>
             <li className="relative group ">
               <div className="flex justify-between items-center">
-                <Link href="/services" className="flex py-2 hover:text-yellow">
+                <Link
+                  href="/behandlungen"
+                  className={
+                    [
+                      "/behandlungen",
+                      "/behandlungen/einzel-und-gruppentherapie",
+                      "/behandlungen/paar-und-sexualtherapie",
+                      "/behandlungen/kinder-und-jugendlichenpsychotherapie",
+                      "/behandlungen/online-psychotherapie",
+                      "/behandlungen/psy-rena",
+                    ].includes(pathname)
+                      ? "text-yellow flex py-2 hover:text-yellow"
+                      : ""
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
                   Behandlungen
                 </Link>
                 <div
@@ -110,7 +135,7 @@ export default function OffCanvas() {
                 className={`bg-white shadow-md space-y-2 transition-all duration-500 ease-in-out overflow-hidden
                             ${
                               submenuOpen
-                                ? "opacity-100 visible max-h-[500px]"
+                                ? "opacity-100 visible max-h-[500px] p-3"
                                 : "opacity-0 invisible max-h-0"
                             }`}
                 style={{
@@ -120,39 +145,92 @@ export default function OffCanvas() {
               >
                 {/* <ul className="sub-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white p-2 rounded-lg"> */}
                 <li>
-                  <Link className="block py-1 px-2 hover:text-yellow" href="/">
+                  <Link
+                    className={
+                      pathname === "/behandlungen/einzel-und-gruppentherapie"
+                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        : ""
+                    }
+                    href="/behandlungen/einzel-und-gruppentherapie"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Einzel und Gruppentherapie
                   </Link>
                 </li>
                 <li>
-                  <Link className="block py-1 px-2 hover:text-yellow" href="/">
+                  <Link
+                    className={
+                      pathname === "/behandlungen/paar-und-sexualtherapie"
+                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        : ""
+                    }
+                    href="/behandlungen/paar-und-sexualtherapie"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Paar und Sexualtherapie
                   </Link>
                 </li>
                 <li>
-                  <Link className="block py-1 px-2 hover:text-yellow" href="/">
+                  <Link
+                    className={
+                      pathname ===
+                      "/behandlungen/kinder-und-jugendlichenpsychotherapie"
+                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        : ""
+                    }
+                    href="/behandlungen/kinder-und-jugendlichenpsychotherapie"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Kinder und Jugendlichenpsychotherapie
                   </Link>
                 </li>
                 <li>
-                  <Link className="block py-1 px-2 hover:text-yellow" href="/">
+                  <Link
+                    className={
+                      pathname === "/behandlungen/online-psychotherapie"
+                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        : ""
+                    }
+                    href="/behandlungen/online-psychotherapie"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Online Psychotherapie
                   </Link>
                 </li>
                 <li>
-                  <Link className="block py-1 px-2 hover:text-yellow" href="/">
+                  <Link
+                    className={
+                      pathname === "/behandlungen/psy-rena"
+                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        : ""
+                    }
+                    href="/behandlungen/psy-rena"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Psy Rena
                   </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href="/about-us" className="block py-2 hover:text-yellow">
+              <Link
+                href="/ueber-uns"
+                className={           
+                  pathname === "/ueber-uns" ? " text-yellow block py-2 hover:text-yellow" :""
+                }
+                onClick={() => setIsOpen(false)}
+              >
                 ÜBER UNS
               </Link>
             </li>
             <li>
-              <Link href="/partners" className="block py-2 hover:text-yellow">
+              <Link
+                href="/kooperationen"
+                className={           
+                  pathname === "/kooperationen" ? "text-yellow block py-2 hover:text-yellow" :""
+                }
+                onClick={() => setIsOpen(false)}
+              >
                 Kooperationen
               </Link>
             </li>

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const ContactSection = () => {
   return (
     <section className="bg-[#FFFBF2] py-14 lg:py-20 2xl:py-100 text-center">
@@ -76,7 +77,7 @@ const ContactSection = () => {
                   href="tel:(+12)7 66 59 45 68"
                   className="inline-block text-white bg-yellow rounded sm:rounded-[10px] py-2 px-6 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors xl:text-lg font-medium"
                 >
-         Jetzt kontaktieren
+                  Jetzt kontaktieren
                 </Link>
               </div>
             </div>
