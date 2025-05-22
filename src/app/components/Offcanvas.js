@@ -1,18 +1,36 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+
 export default function OffCanvas() {
   const [isOpen, setIsOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const pathname = usePathname();
+
+  const handleToggleSubmenu = (e) => {
+    e.stopPropagation();
+    setSubmenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const isActive = (path) => pathname === path;
+
+  const isSubmenuActive = (paths) => paths.some((path) => pathname === path);
+
   return (
     <>
+      {/* Menu Button */}
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Main Menu"
         className="p-2 sm:p-3 2xl:py-4 2xl:px-8 cursor-pointer inline-block bg-yellow rounded sm:rounded-[10px] hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors lg:hidden"
       >
+        {/* Chevron Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -48,8 +66,9 @@ export default function OffCanvas() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
+        {/* Close Button */}
         <div className="flex justify-end p-4 pb-0 text-yellow">
-          <button onClick={() => setIsOpen(false)}>
+          <button onClick={closeMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"
@@ -69,48 +88,45 @@ export default function OffCanvas() {
           </button>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation Menu */}
         <nav className="p-4 space-y-3 uppercase text-black text-opacity-65">
           <ul className="space-y-4">
+            {/* Start Link */}
             <li>
               <Link
                 href="/"
-                className={
-                  pathname === "/"
-                    ? "text-yellow block py-2 hover:text-yellow"
-                    : ""
-                }
-                onClick={() => setIsOpen(false)}
+                className={`block py-2 ${
+                  isActive("/") ? "text-yellow hover:text-yellow" : ""
+                }`}
+                onClick={closeMenu}
               >
                 START
               </Link>
             </li>
-            <li className="relative group ">
+
+            {/* Behandlungen with Submenu */}
+            <li className="relative group">
               <div className="flex justify-between items-center">
                 <Link
                   href="/behandlungen"
-                  className={
-                    [
+                  className={`flex py-2 ${
+                    isSubmenuActive([
                       "/behandlungen",
                       "/behandlungen/einzel-und-gruppentherapie",
                       "/behandlungen/paar-und-sexualtherapie",
                       "/behandlungen/kinder-und-jugendlichenpsychotherapie",
                       "/behandlungen/online-psychotherapie",
                       "/behandlungen/psy-rena",
-                    ].includes(pathname)
-                      ? "text-yellow flex py-2 hover:text-yellow"
+                    ])
+                      ? "text-yellow hover:text-yellow"
                       : ""
-                  }
-                  onClick={() => setIsOpen(false)}
+                  }`}
+                  onClick={closeMenu}
                 >
                   Behandlungen
                 </Link>
-                <div
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSubmenuOpen(!submenuOpen);
-                  }}
-                >
+                {/* Chevron for submenu toggle */}
+                <div onClick={handleToggleSubmenu}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -121,31 +137,30 @@ export default function OffCanvas() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`
-    icon icon-tabler icons-tabler-outline icon-tabler-chevron-down
-    transform transition-transform duration-300
-    ${submenuOpen ? "rotate-180" : "rotate-0"}
-    ${
-      [
-        "/behandlungen",
-        "/behandlungen/einzel-und-gruppentherapie",
-        "/behandlungen/paar-und-sexualtherapie",
-        "/behandlungen/kinder-und-jugendlichenpsychotherapie",
-        "/behandlungen/online-psychotherapie",
-        "/behandlungen/psy-rena",
-      ].includes(pathname)
-        ? "text-yellow hover:text-yellow"
-        : ""
-    }
-  `}
+                    className={`icon icon-tabler icons-tabler-outline icon-tabler-chevron-down transition-transform duration-300 ${
+                      submenuOpen ? "rotate-180" : "rotate-0"
+                    } ${
+                      isSubmenuActive([
+                        "/behandlungen",
+                        "/behandlungen/einzel-und-gruppentherapie",
+                        "/behandlungen/paar-und-sexualtherapie",
+                        "/behandlungen/kinder-und-jugendlichenpsychotherapie",
+                        "/behandlungen/online-psychotherapie",
+                        "/behandlungen/psy-rena",
+                      ])
+                        ? "text-yellow hover:text-yellow"
+                        : ""
+                    }`}
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M6 9l6 6l6 -6" />
                   </svg>
                 </div>
               </div>
+
+              {/* Submenu Items */}
               <ul
-                className={`transition-all duration-500 p-0 ease-in-out overflow-hidden  bg-white shadow-md ${
+                className={`transition-all duration-500 p-0 ease-in-out overflow-hidden bg-white shadow-md ${
                   submenuOpen
                     ? "max-h-[500px] opacity-100 visible"
                     : "max-h-0 opacity-0 invisible p-0"
@@ -155,105 +170,69 @@ export default function OffCanvas() {
                     "max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s, padding 0.3s",
                 }}
               >
-                {/* <ul className="sub-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white p-2 rounded-lg"> */}
-                <li className="px-3 py-1">
-                  <Link
-                    className={` ${
-                      pathname === "/behandlungen/einzel-und-gruppentherapie"
-                        ? "text-yellow block hover:text-yellow"
-                        : ""
-                    }
-                        `}
-                    href="/behandlungen/einzel-und-gruppentherapie"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Einzel und Gruppentherapie
-                  </Link>
-                </li>
-                <li className="px-3 py-1">
-                  <Link
-                    className={`
-                      ${
-                        pathname === "/behandlungen/paar-und-sexualtherapie"
-                          ? "text-yellow block  hover:text-yellow"
-                          : ""
-                      }
-                    `}
-                    href="/behandlungen/paar-und-sexualtherapie"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Paar und Sexualtherapie
-                  </Link>
-                </li>
-                <li className="px-3 py-1">
-                  <Link
-                    className={`
-                      ${
-                        pathname ===
-                        "/behandlungen/kinder-und-jugendlichenpsychotherapie"
-                          ? "text-yellow block  hover:text-yellow"
+                {/* Submenu Links */}
+                {[
+                  {
+                    href: "/behandlungen/einzel-und-gruppentherapie",
+                    label: "Einzel und Gruppentherapie",
+                  },
+                  {
+                    href: "/behandlungen/paar-und-sexualtherapie",
+                    label: "Paar und Sexualtherapie",
+                  },
+                  {
+                    href: "/behandlungen/kinder-und-jugendlichenpsychotherapie",
+                    label: "Kinder und Jugendlichenpsychotherapie",
+                  },
+                  {
+                    href: "/behandlungen/online-psychotherapie",
+                    label: "Online Psychotherapie",
+                  },
+                  {
+                    href: "/behandlungen/psy-rena",
+                    label: "Psy Rena",
+                  },
+                ].map((item) => (
+                  <li key={item.href} className="px-3 py-1">
+                    <Link
+                      href={item.href}
+                      className={`${
+                        isActive(item.href)
+                          ? "text-yellow hover:text-yellow"
                           : ""
                       }`}
-                    href="/behandlungen/kinder-und-jugendlichenpsychotherapie"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Kinder und Jugendlichenpsychotherapie
-                  </Link>
-                </li>
-                <li className="px-3 py-1">
-                  <Link
-                    className={`
-                      ${
-                        pathname === "/behandlungen/online-psychotherapie"
-                          ? "text-yellow block  hover:text-yellow"
-                          : ""
-                      }
-                    `}
-                    href="/behandlungen/online-psychotherapie"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Online Psychotherapie
-                  </Link>
-                </li>
-                <li className="px-3 py-1">
-                  <Link
-                    className={`
-                      ${
-                        pathname === "/behandlungen/psy-rena"
-                          ? "text-yellow block  hover:text-yellow"
-                          : ""
-                      }
-                    `}
-                    href="/behandlungen/psy-rena"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Psy Rena
-                  </Link>
-                </li>
+                      onClick={closeMenu}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </li>
+
+            {/* Über Uns */}
             <li>
               <Link
                 href="/ueber-uns"
-                className={
-                  pathname === "/ueber-uns"
-                    ? " text-yellow block  hover:text-yellow"
-                    : ""
-                }
-                onClick={() => setIsOpen(false)}
+                className={`block py-2 ${
+                  isActive("/ueber-uns") ? "text-yellow hover:text-yellow" : ""
+                }`}
+                onClick={closeMenu}
               >
                 ÜBER UNS
               </Link>
             </li>
+
+            {/* Kooperationen */}
             <li>
               <Link
                 href="/kooperationen"
-                className={
-                  pathname === "/kooperationen"
-                    ? "text-yellow block  hover:text-yellow"
+                className={`block py-2 ${
+                  isActive("/kooperationen")
+                    ? "text-yellow hover:text-yellow"
                     : ""
-                }
-                onClick={() => setIsOpen(false)}
+                }`}
+                onClick={closeMenu}
               >
                 Kooperationen
               </Link>

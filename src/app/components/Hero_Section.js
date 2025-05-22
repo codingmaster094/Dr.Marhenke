@@ -25,9 +25,7 @@ const Hero_Section = ({ title, subtitle, points, buttonText, buttonLink, imageSr
                 }
             </div>
             <div className="lg:w-6/12 flex items-end ">
-            <div>
                 <Image role="img" className="!static" fill src={imageSrc} alt="Hero-image"/>
-            </div>
             </div>
         </div>
     </section>
