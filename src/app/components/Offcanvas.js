@@ -147,7 +147,7 @@ export default function OffCanvas() {
               <ul
                 className={`transition-all duration-500 p-0 ease-in-out overflow-hidden  bg-white shadow-md ${
                   submenuOpen
-                    ? "max-h-[500px] opacity-100 visible p-3"
+                    ? "max-h-[500px] opacity-100 visible"
                     : "max-h-0 opacity-0 invisible p-0"
                 }`}
                 style={{
