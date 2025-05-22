@@ -71,7 +71,7 @@ export default function OffCanvas() {
 
         {/* Navigation */}
         <nav className="p-4 space-y-3 uppercase text-black text-opacity-65">
-          <ul>
+          <ul className="space-y-4">
             <li>
               <Link
                 href="/"
@@ -131,23 +131,22 @@ export default function OffCanvas() {
                 </div>
               </div>
               <ul
-                className={`bg-white shadow-md space-y-2 transition-all duration-500 ease-in-out overflow-hidden
-                            ${
-                              submenuOpen
-                                ? "opacity-100 visible max-h-[500px] p-3"
-                                : "opacity-0 invisible max-h-0"
-                            }`}
+                className={`transition-all duration-500 p-0 ease-in-out overflow-hidden  bg-white shadow-md ${
+                  submenuOpen
+                    ? "max-h-[500px] opacity-100 visible p-3"
+                    : "max-h-0 opacity-0 invisible p-3"
+                }`}
                 style={{
                   transition:
-                    "max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s",
+                    "max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s, padding 0.3s",
                 }}
               >
                 {/* <ul className="sub-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white p-2 rounded-lg"> */}
-                <li>
+                <li className="px-3 py-1">
                   <Link
                     className={
                       pathname === "/behandlungen/einzel-und-gruppentherapie"
-                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        ? "text-yellow block hover:text-yellow"
                         : ""
                     }
                     href="/behandlungen/einzel-und-gruppentherapie"
@@ -156,11 +155,11 @@ export default function OffCanvas() {
                     Einzel und Gruppentherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
                     className={
                       pathname === "/behandlungen/paar-und-sexualtherapie"
-                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        ? "text-yellow block  hover:text-yellow"
                         : ""
                     }
                     href="/behandlungen/paar-und-sexualtherapie"
@@ -169,12 +168,12 @@ export default function OffCanvas() {
                     Paar und Sexualtherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
                     className={
                       pathname ===
                       "/behandlungen/kinder-und-jugendlichenpsychotherapie"
-                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        ? "text-yellow block  hover:text-yellow"
                         : ""
                     }
                     href="/behandlungen/kinder-und-jugendlichenpsychotherapie"
@@ -183,11 +182,11 @@ export default function OffCanvas() {
                     Kinder und Jugendlichenpsychotherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
                     className={
                       pathname === "/behandlungen/online-psychotherapie"
-                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        ? "text-yellow block  hover:text-yellow"
                         : ""
                     }
                     href="/behandlungen/online-psychotherapie"
@@ -196,11 +195,11 @@ export default function OffCanvas() {
                     Online Psychotherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
                     className={
                       pathname === "/behandlungen/psy-rena"
-                        ? "text-yellow block py-1 px-2 hover:text-yellow"
+                        ? "text-yellow block  hover:text-yellow"
                         : ""
                     }
                     href="/behandlungen/psy-rena"
@@ -214,8 +213,10 @@ export default function OffCanvas() {
             <li>
               <Link
                 href="/ueber-uns"
-                className={           
-                  pathname === "/ueber-uns" ? " text-yellow block py-2 hover:text-yellow" :""
+                className={
+                  pathname === "/ueber-uns"
+                    ? " text-yellow block  hover:text-yellow"
+                    : ""
                 }
                 onClick={() => setIsOpen(false)}
               >
@@ -225,8 +226,10 @@ export default function OffCanvas() {
             <li>
               <Link
                 href="/kooperationen"
-                className={           
-                  pathname === "/kooperationen" ? "text-yellow block py-2 hover:text-yellow" :""
+                className={
+                  pathname === "/kooperationen"
+                    ? "text-yellow block  hover:text-yellow"
+                    : ""
                 }
                 onClick={() => setIsOpen(false)}
               >
