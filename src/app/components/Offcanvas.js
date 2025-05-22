@@ -121,9 +121,23 @@ export default function OffCanvas() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`icon icon-tabler icons-tabler-outline icon-tabler-chevron-down transform transition-transform duration-300 ${
-                      submenuOpen ? "rotate-180" : "rotate-0"
-                    }`}
+                    className={`
+    icon icon-tabler icons-tabler-outline icon-tabler-chevron-down
+    transform transition-transform duration-300
+    ${submenuOpen ? "rotate-180" : "rotate-0"}
+    ${
+      [
+        "/behandlungen",
+        "/behandlungen/einzel-und-gruppentherapie",
+        "/behandlungen/paar-und-sexualtherapie",
+        "/behandlungen/kinder-und-jugendlichenpsychotherapie",
+        "/behandlungen/online-psychotherapie",
+        "/behandlungen/psy-rena",
+      ].includes(pathname)
+        ? "text-yellow hover:text-yellow"
+        : ""
+    }
+  `}
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M6 9l6 6l6 -6" />
