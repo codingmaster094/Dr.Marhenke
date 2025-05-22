@@ -142,9 +142,9 @@ export default function OffCanvas() {
                 }}
               >
                 {/* <ul className="sub-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white p-2 rounded-lg"> */}
-                <li>
+                <li className="px-3 py-1">
                   <Link
-                    className={`px-3 py-1 ${
+                    className={` ${
                       pathname === "/behandlungen/einzel-und-gruppentherapie"
                         ? "text-yellow block hover:text-yellow"
                         : ""
@@ -156,9 +156,9 @@ export default function OffCanvas() {
                     Einzel und Gruppentherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
-                    className={`px-3 py-1
+                    className={`
                       ${
                         pathname === "/behandlungen/paar-und-sexualtherapie"
                           ? "text-yellow block  hover:text-yellow"
@@ -171,9 +171,9 @@ export default function OffCanvas() {
                     Paar und Sexualtherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
-                    className={`px-3 py-1
+                    className={`
                       ${
                         pathname ===
                         "/behandlungen/kinder-und-jugendlichenpsychotherapie"
@@ -186,9 +186,9 @@ export default function OffCanvas() {
                     Kinder und Jugendlichenpsychotherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
-                    className={`px-3 py-1
+                    className={`
                       ${
                         pathname === "/behandlungen/online-psychotherapie"
                           ? "text-yellow block  hover:text-yellow"
@@ -201,9 +201,9 @@ export default function OffCanvas() {
                     Online Psychotherapie
                   </Link>
                 </li>
-                <li>
+                <li className="px-3 py-1">
                   <Link
-                    className={`px-3 py-1
+                    className={`
                       ${
                         pathname === "/behandlungen/psy-rena"
                           ? "text-yellow block  hover:text-yellow"
