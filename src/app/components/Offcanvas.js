@@ -103,7 +103,7 @@ export default function OffCanvas() {
                   }
                   onClick={() => setIsOpen(false)}
                 >
-                  Behandlungen
+                  Behandlungenabc  
                 </Link>
                 <div
                   onClick={(e) => {
