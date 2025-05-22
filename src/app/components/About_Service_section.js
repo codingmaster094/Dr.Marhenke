@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 const page = ({
   title, 
   description, 
@@ -43,5 +42,4 @@ const page = ({
 
   );
 };
-
 export default page;

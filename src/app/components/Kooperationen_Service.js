@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 const Kooperationen_Service = ({ 
   title, 
   description, 
@@ -58,5 +57,4 @@ const Kooperationen_Service = ({
     </section>
   );
 };
-
 export default Kooperationen_Service;

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 const ServiceSection = ({ 
   title, 
   description, 
@@ -50,5 +49,4 @@ const ServiceSection = ({
     </section>
   );
 };
-
 export default ServiceSection;

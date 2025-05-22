@@ -54,9 +54,9 @@ const config = {
       fontSize: {
         a: ["16px", { lineHeight: "28px", fontWeight: "500" }],
         p: ["18px", { lineHeight: "28px", fontWeight: "400" }],
-        h1: ["clamp(1.75rem, 1.5735rem + 0.8824vw, 2.5rem)", { lineHeight: "clamp(2.5rem, 2.2647rem + 1.1765vw, 3.5rem)", fontWeight: "700" }],
-        h2: ["clamp(1.625rem, 1.5221rem + 0.5147vw, 2.0625rem)", { lineHeight: "clamp(2.375rem, 2.2426rem + 0.6618vw, 2.9375rem)", fontWeight: "700" }],
-        h3: ["clamp(1.5rem, 1.4412rem + 0.2941vw, 1.75rem)", { lineHeight: " clamp(2.25rem, 2.1618rem + 0.4412vw, 2.625rem)", fontWeight: "700" }],
+        h1: ["clamp(1.25rem, 1.3rem + 0.8824vw, 2.5rem);", { lineHeight: "clamp(2rem, 2.2647rem + 1.1765vw, 3.5rem)", fontWeight: "700" }],
+        h2: ["clamp(0.9rem, 1rem + 0.5147vw, 2.0625rem)", { lineHeight: "clamp(1.2rem, 1.5rem + 0.6618vw, 2.9375rem)", fontWeight: "700" }],
+        h3: ["clamp(0.9rem, 1rem + 0.2941vw, 1.75rem)", { lineHeight: " clamp(1.2rem, 1.5rem + 0.4412vw, 2.625rem)", fontWeight: "700" }],
       },
     },
   },

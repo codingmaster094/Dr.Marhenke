@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Review_section = ({bg}) => {
   return (
     <section className={`py-14 lg:py-20 2xl:py-100 text-center ${bg} bg-opacity-25`}>
@@ -22,5 +21,4 @@ const Review_section = ({bg}) => {
     </section>
   )
 }
-
 export default Review_section

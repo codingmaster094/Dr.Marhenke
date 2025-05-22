@@ -1,5 +1,4 @@
 "use client";
-
 // Import Swiper React components
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,14 +10,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Link from "next/link";
-
 const Psychotherapeuten = () => {
   const swiperRef = useRef(null);
-
   const nextSlide = () => {
     swiperRef.current.swiper.slideNext(); 
   };
-
   const prevSlide = () => {
     swiperRef.current.swiper.slidePrev(); 
   };
@@ -256,5 +252,4 @@ const Psychotherapeuten = () => {
     </section>
   );
 };
-
 export default Psychotherapeuten;

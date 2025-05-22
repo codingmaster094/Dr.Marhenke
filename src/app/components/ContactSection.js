@@ -1,9 +1,6 @@
 'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-
-
 const ContactSection = () => {
   return (
     <section className="bg-[#FFFBF2] py-14 lg:py-20 2xl:py-100 text-center">

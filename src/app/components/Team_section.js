@@ -1,17 +1,13 @@
 "use client";
-
 // Import Swiper React components
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import Link from "next/link";
-
 const Team_section = () => {
   const swiperRef = useRef(null); // Ref to the Swiper instance
   const nextSlide = () => {
@@ -250,5 +246,4 @@ const Team_section = () => {
     </section>
   );
 };
-
 export default Team_section;

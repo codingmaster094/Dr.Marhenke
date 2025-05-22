@@ -29,7 +29,7 @@
   }
   p,
   li {
-    @apply text-p;
+    @apply text-base sm:text-p;
   }
   .swiper-pagination .swiper-pagination-bullet-active {
     @apply bg-yellow;
@@ -52,111 +52,84 @@
   .wpcf7-form .f-fild select option {
     @apply text-black;
   }
-
   .wpcf7-submit {
     @apply text-yellow bg-white rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-white hover:shadow hover:shadow-white transition-colors font-medium mt-4;
   }
-
   .wpcf7-form [type="checkbox"] {
     @apply appearance-none;
   }
-
   .wpcf7-form .f-fild:has(select) {
     @apply relative after:block after:absolute after:size-6 after:bg-[url(/images/down.svg)] after:bg-cover after:bg-center after:invert after:right-7 after:top-1/2 after:-translate-y-1/2;
   }
-
   .menu-item-has-children {
     @apply relative;
   }
-  
   .menu-item-has-children::after {
     @apply transition-transform duration-300 block size-6 bg-[url(/images/down.svg)] opacity-65 content-[""];
   }
-
   .menu-item-has-children:hover::after {
     @apply invert-[65%] sepia-[100%] opacity-100;
   }
-
   .menu-item-has-children .sub-menu {
     @apply absolute bg-white w-full lg:min-w-[300px] flex gap-3 flex-col shadow opacity-0 invisible transition-all px-4 py-3 rounded top-full text-black text-opacity-65 break-words;
   }
-
   .menu-item-has-children.open .sub-menu {
     @apply opacity-100 visible;
   }
-
   .menu-item-has-children:hover .sub-menu {
     @apply lg:opacity-100 lg:visible;
   }
-
   .menu-item-has-children {
     @apply flex gap-1.5 items-center justify-between relative hover:text-yellow;
   }
-
   .sec-page-title {
     @apply pt-20 pb-12;
   }
-
   .sec-page-content {
     @apply pb-20;
   }
-
   .sec-page-content p {
     @apply mb-4;
   }
-
   .sec-page-content .wp-block-heading {
     @apply mt-10 mb-5;
   }
-
   .sec-page-content .wp-block-list {
     @apply flex flex-col gap-2.5 ml-[22px];
   }
-
   .sec-page-content ul.wp-block-list {
     @apply list-image-[url(/images/list-img.svg)];
   }
-
   .sec-page-content h4 {
     @apply text-2xl font-semibold mt-10 mb-5;
   }
-
   .sec-page-content h5 {
     @apply text-lg font-semibold mt-8 mb-4;
   }
-
   .sec-page-title h1 {
     @apply text-h3 sm:text-h1;
   }
-
   .sec-page-content a {
     @apply text-yellow break-words;
   }
-
   .menu-item-has-children.open::after {
     @apply rotate-180;
   }
-
   .menu-item-has-children:hover::after {
     @apply lg:rotate-180;
   }
-
   .treatment-content img {
     @apply w-full h-full rounded-3xl;
   }
-
   .treatment-content ul li {
     @apply mb-4;
   }
-
   .treatment-content .is-layout-grid {
     @apply gap-16;
   }
-
   .treatment-content .wp-container-core-group-is-layout-2.is-layout-grid {
     @apply flex-col-reverse;
   }
-
   .teamSwiper .swiper-wrapper{
     @apply divide-x divide-white
   }
@@ -170,47 +143,38 @@
     @apply flex items-center
   }
 }
-
 .dots-container {
   display: flex;
 }
-
 .dot {
   height: 15px;
   width: 15px;
   margin-right: 10px;
   border-radius: 10px;
   background-color: #000000;
-  animation: pulse 1.5s infinite ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
 }
-
 .dot:last-child {
   margin-right: 0;
 }
-
 .dot:nth-child(1) {
   animation-delay: -0.3s;
 }
-
 .dot:nth-child(2) {
   animation-delay: -0.1s;
 }
-
 .dot:nth-child(3) {
   animation-delay: 0.1s;
 }
-
 @keyframes pulse {
   0% {
     transform: scale(0.8);
     background-color: #000000;
   }
-
   50% {
     transform: scale(1.2);
     background-color: #000000;
   }
-
   100% {
     transform: scale(0.8);
     background-color: #000000;

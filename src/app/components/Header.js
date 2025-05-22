@@ -4,11 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Offcanvas from "../components/Offcanvas";
 import { usePathname } from "next/navigation";
-
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const pathname = usePathname(); // Get current route
-
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 120);
@@ -16,7 +14,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <header
       id="header"
@@ -158,5 +155,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;

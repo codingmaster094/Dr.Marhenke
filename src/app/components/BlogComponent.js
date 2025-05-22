@@ -71,7 +71,7 @@ const BlogComponent = () => {
 
         <Link
           href="/"
-          className="inline-block w-fit text-white bg-yellow rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors font-medium"
+          className="inline-block w-fit text-white  bg-yellow rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors font-medium"
         >
           Mehr erfahren
         </Link>

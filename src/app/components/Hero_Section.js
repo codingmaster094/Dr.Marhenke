@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
 const Hero_Section = ({ title, subtitle, points, buttonText, buttonLink, imageSrc }) => {
   return (
     <section className="container">
@@ -20,7 +19,7 @@ const Hero_Section = ({ title, subtitle, points, buttonText, buttonLink, imageSr
                 {
                     buttonText && 
                 <Link role="link" href={buttonLink}
-                    className="inline-block w-fit text-white bg-yellow rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors font-medium">
+                    className="inline-block w-fit text-white text-center bg-yellow rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors font-medium">
                     {buttonText}
                 </Link>
                 }
@@ -34,5 +33,4 @@ const Hero_Section = ({ title, subtitle, points, buttonText, buttonLink, imageSr
     </section>
   )
 }
-
 export default Hero_Section

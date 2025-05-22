@@ -1,10 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-
 const FAQ_section = ({title ,faqs}) => {
   const [selected, setSelected] = useState(0);
   const contentRefs = useRef(new Map());
-
   useEffect(() => {
     if (selected !== null && contentRefs.current.has(selected)) {
       // Force reflow to apply transition smoothly on first click
@@ -17,12 +15,9 @@ const FAQ_section = ({title ,faqs}) => {
       }
     }
   }, [selected]);
-
   const handleClick = (index) => {
     setSelected(selected !== index ? index : null);
   };
-
-
   return (
     <section className="py-14 lg:py-20 2xl:py-100">
       <div className="container">

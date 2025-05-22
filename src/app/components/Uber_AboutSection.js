@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 const Uber_AboutSection = ({params}) => {
   const blogPosts = [
     {
@@ -95,5 +94,4 @@ const Uber_AboutSection = ({params}) => {
     </section>
   );
 };
-
 export default Uber_AboutSection;

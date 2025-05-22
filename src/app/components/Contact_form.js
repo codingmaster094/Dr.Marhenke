@@ -58,13 +58,6 @@ const Contact_form = () => {
     selectedIcon:""
   });
 
-  const allImages = [
-    { src: "images/home.svg", label: "Haus" },
-    { src: "images/car.svg", label: "Auto" },
-    { src: "images/tree.svg", label: "Baum" },
-    { src: "images/dog.svg", label: "Hund" },
-    { src: "images/cat.svg", label: "Katze" },
-  ];
 
   useEffect(() => {
     const selectedIcons = getRandomItems(iconData, 3);
@@ -74,26 +67,10 @@ const Contact_form = () => {
     const randomLabelItem =
       selectedIcons[Math.floor(Math.random() * selectedIcons.length)];
     setRandomLabel(randomLabelItem.label);
-    setcorrectAnswer(randomLabelItem.label); // Store the correct answer
+    setcorrectAnswer(randomLabelItem.label);
+    setLoading(false); // Store the correct answer
   }, []);
 
-  useEffect(() => {
-    const generateCaptcha = () => {
-      let otherImages = allImages.filter((img) => img.label !== "Haus");
-      let shuffledImages = otherImages
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 2);
-      let finalImages = [allImages[0], ...shuffledImages].sort(
-        () => Math.random() - 0.5
-      );
-      setImages(finalImages);
-      setSelectedImage(null);
-      setIsVerified(false);
-      setLoading(false); // Set loading to false after images are set
-    };
-
-    generateCaptcha();
-  }, []);
 
   const validateForm = () => {
     let formErrors = {};

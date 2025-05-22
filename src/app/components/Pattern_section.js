@@ -34,5 +34,4 @@ const Pattern_section = ({btn}) => {
     </section>
   );
 }
-
 export default Pattern_section

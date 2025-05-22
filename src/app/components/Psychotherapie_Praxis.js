@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 const Psychotherapie_Praxis = ({
   title,
   description,
@@ -221,5 +220,4 @@ const Psychotherapie_Praxis = ({
     </section>
   );
 };
-
 export default Psychotherapie_Praxis;

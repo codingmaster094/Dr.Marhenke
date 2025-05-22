@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Link from "next/link";
 import Image from "next/image";
-
 const Kooperationspartner = () => {
   const swiperRef = useRef(null); // Ref to the Swiper instance
 
@@ -191,5 +190,4 @@ const Kooperationspartner = () => {
     </section>
   );
 };
-
 export default Kooperationspartner;
