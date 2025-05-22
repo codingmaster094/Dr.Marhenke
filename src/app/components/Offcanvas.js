@@ -90,7 +90,7 @@ export default function OffCanvas() {
 
         {/* Navigation Menu */}
         <nav className="p-4 space-y-3 uppercase text-black text-opacity-65">
-          <ul className="space-y-4">
+          <ul className="md:space-y-4 space-y-2">
             {/* Start Link */}
             <li>
               <Link

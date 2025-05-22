@@ -23,7 +23,7 @@ const Pattern_section = ({btn}) => {
             btn && 
           <Link
             role="link"
-            class="inline-block w-fit text-yellow bg-white rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-white hover:shadow hover:shadow-white transition-colors font-medium"
+            className="inline-block w-fit text-yellow bg-white rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-white hover:shadow hover:shadow-white transition-colors font-medium"
             href="/"
           >
             Jetzt kontaktieren

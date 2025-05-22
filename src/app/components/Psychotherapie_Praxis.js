@@ -52,8 +52,8 @@ const Psychotherapie_Praxis = ({
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 text-center flex-wrap justify-center">
-          <div class="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
-            <div class="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
+          <div className="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
+            <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
               <Image
                 role="img"
                 src="images/men-icon.svg"
@@ -62,20 +62,20 @@ const Psychotherapie_Praxis = ({
                 height={52}
               />
             </div>
-            <h3 class="mb-2 lg:mt-6 text-h3 font-bold">Rodenkirchen </h3>
-            <div class="mb-4 lg:mb-8 text-p space-y-4">
+            <h3 className="mb-2 lg:mt-6 text-h3 font-bold">Rodenkirchen </h3>
+            <div className="mb-4 lg:mb-8 text-p space-y-4">
               <p>
                 Gustav-Radbruch-Straße 1
                 <br />
                 50996 Köln
               </p>
             </div>
-            <div class="mb-4 lg:mb-8 text-p space-y-4">
+            <div className="mb-4 lg:mb-8 text-p space-y-4">
               <div>
                 <span>Telefon:</span>
                 <a
                   role="link"
-                  class="hover:text-yellow transition-colors"
+                  className="hover:text-yellow transition-colors"
                   href="tel:022142313956"
                   aria-label="0221/42 31 39 56"
                   target="_self"
@@ -87,7 +87,7 @@ const Psychotherapie_Praxis = ({
                 <span>E-Mail:</span>
                 <a
                   role="link"
-                  class="hover:text-yellow transition-colors"
+                  className="hover:text-yellow transition-colors"
                   href="mailto:kontakt@psycho-therapie-koeln.de"
                   aria-label="kontakt@psycho-therapie-koeln.de"
                   target="_self"
@@ -101,13 +101,13 @@ const Psychotherapie_Praxis = ({
               href="https://marhenke.blog-s.de/koeln-rodenkirchen/"
               aria-label="Mehr erfahren"
               target="_self"
-              class="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"
+              className="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"
             >
               Mehr erfahren{" "}
             </a>
           </div>
-          <div class="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
-            <div class="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
+          <div className="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
+            <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
               <Image
                 role="img"
                 src="images/save-health.svg"
@@ -116,20 +116,20 @@ const Psychotherapie_Praxis = ({
                 height={52}
               />
             </div>
-            <h3 class="mb-2 lg:mt-6 text-h3 font-bold">Südstadt </h3>
-            <div class="mb-4 lg:mb-8 text-p space-y-4">
+            <h3 className="mb-2 lg:mt-6 text-h3 font-bold">Südstadt </h3>
+            <div className="mb-4 lg:mb-8 text-p space-y-4">
               <p>
                 Rolandstraße 55
                 <br />
                 50677 Köln
               </p>
             </div>
-            <div class="mb-4 lg:mb-8 text-p space-y-4">
+            <div className="mb-4 lg:mb-8 text-p space-y-4">
               <div>
                 <span>Telefon:</span>
                 <a
                   role="link"
-                  class="hover:text-yellow transition-colors"
+                  className="hover:text-yellow transition-colors"
                   href="tel:022117004036"
                   aria-label="0221/17 00 40 36"
                   target="_self"
@@ -141,7 +141,7 @@ const Psychotherapie_Praxis = ({
                 <span>E-Mail:</span>
                 <a
                   role="link"
-                  class="hover:text-yellow transition-colors"
+                  className="hover:text-yellow transition-colors"
                   href="mailto:kontakt@psycho-therapie-koeln.de"
                   aria-label="kontakt@psycho-therapie-koeln.de"
                   target="_self"
@@ -155,14 +155,14 @@ const Psychotherapie_Praxis = ({
               href="https://marhenke.blog-s.de/koeln-suedstadt/"
               aria-label="Mehr erfahren"
               target="_self"
-              class="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"
+              className="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"
             >
               Mehr erfahren{" "}
             </a>
           </div>
 
-          <div class="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
-            <div class="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
+          <div className="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
+            <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
               <Image
                 role="img"
                 src="images/body-icon.svg"
@@ -171,20 +171,20 @@ const Psychotherapie_Praxis = ({
                 height={52}
               />
             </div>
-            <h3 class="mb-2 lg:mt-6 text-h3 font-bold">Hürth </h3>
-            <div class="mb-4 lg:mb-8 text-p space-y-4">
+            <h3 className="mb-2 lg:mt-6 text-h3 font-bold">Hürth </h3>
+            <div className="mb-4 lg:mb-8 text-p space-y-4">
               <p>
                 Krankenhausstraße 107
                 <br />
                 50354 Hürth
               </p>
             </div>
-            <div class="mb-4 lg:mb-8 text-p space-y-4">
+            <div className="mb-4 lg:mb-8 text-p space-y-4">
               <div>
                 <span>Telefon:</span>
                 <a
                   role="link"
-                  class="hover:text-yellow transition-colors"
+                  className="hover:text-yellow transition-colors"
                   href="tel:022333740978"
                   aria-label="022333740978"
                   target="_self"
@@ -196,7 +196,7 @@ const Psychotherapie_Praxis = ({
                 <span>E-Mail:</span>
                 <a
                   role="link"
-                  class="hover:text-yellow transition-colors"
+                  className="hover:text-yellow transition-colors"
                   href="mailto:kontakt@psycho-therapie-huerth.de"
                   aria-label="kontakt@psycho-therapie-huerth.de"
                   target="_self"
@@ -210,7 +210,7 @@ const Psychotherapie_Praxis = ({
               href="https://marhenke.blog-s.de/koeln-huerth/"
               aria-label="Mehr erfahren"
               target="_self"
-              class="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"
+              className="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"
             >
               Mehr erfahren{" "}
             </a>

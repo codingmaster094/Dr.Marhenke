@@ -60,7 +60,7 @@ const Header = () => {
                   >
                     Behandlungen
                   </Link>
-                  <ul className="z-50 sub-menu absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all bg-white shadow-md mt-2 py-2 px-4 space-y-2">
+                  <ul className="z-50 sub-menu absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all bg-white shadow-md mt-2 py-2 px-4 ">
                     <li>
                       <Link
                         href="/behandlungen/einzel-und-gruppentherapie"
