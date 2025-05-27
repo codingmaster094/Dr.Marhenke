@@ -6,21 +6,21 @@ const Uber_AboutSection = ({params}) => {
       id: 1,
       title: "Dr. Tristan Marhenke",
       image: "/images/team-member-1.png",
-      link: "/treatments",
+      link: "/tristan-marhenke",
       description: "Psychologischer Psychotherapeut",
     },
     {
       id: 2,
       title: "M.Sc. Aida Marhenke",
       image: "/images/team-member-2.png",
-      link: "/treatments",
+      link: "/aida-marhenke",
       description: "Psychologische Psychotherapeutin",
     },
     {
       id: 3,
       title: "M.Sc. Roja Jansen",
       image: "/images/team-member-3.png",
-      link: "/treatments",
+      link: "/roja-jansen",
       description: "Psychologische Psychotherapeutin",
     },
   ];
@@ -29,8 +29,8 @@ const Uber_AboutSection = ({params}) => {
   return (
     <section className="bg-[#FFF2CE] py-14 lg:py-20 2xl:py-[100px] bg-opacity-25">
       <div className="container space-y-16">
-        <div className="flex flex-col lg:flex-row gap-4 xl:gap-16">
-          <div className="lg:w-6/12 self-stretch 3xl:aspect-[1.95/1] rounded md:rounded-3xl overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-4 xl:gap-16 items-start">
+          <div className="lg:w-6/12 self-stretch rounded md:rounded-3xl overflow-hidden">
             <Image
               src="/images/about-img-2.png"
               alt="Service Image"
@@ -70,7 +70,7 @@ const Uber_AboutSection = ({params}) => {
               </div>
                 <Link
                   role="button"
-                  href="/team/tristan-marhenke"
+                  href={`/team${item.link}`}
                   className="absolute bg-yellow bg-opacity-65 inset-6 grid place-items-center rounded-xl lg:rounded-2xl 3xl:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"
                 >
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="34"  height="34"  viewBox="0 0 24 24"  fill="none"  stroke="white"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>

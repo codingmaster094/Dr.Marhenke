@@ -1,9 +1,8 @@
 import Hero_Section from "@/app/components/Hero_Section"
 import About_Service_section from "@/app/components/About_Service_section";
 
-const page = ({params}) => {
+const page = async({params}) => {
   const {slug} = params
-  console.log('slug', slug)
 return (
   <>
     <Hero_Section

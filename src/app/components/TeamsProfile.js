@@ -27,12 +27,16 @@ const TeamsProfile = ({title}) => {
 
 
   return (
-    <section className=" py-14 lg:py-20 2xl:py-[100px] bg-opacity-25">
-      <div className="container space-y-16">
-        <div className="flex flex-col gap-[34px] items-center">
-          <h2 className="sm:text-h3 lg:text-h2">{title}</h2>
-          <span className="w-28 h-1 bg-yellow block mx-auto"></span>
-        </div>
+    <section
+      className={title && "py-14 lg:py-20 2xl:py-[100px] bg-opacity-25"}
+    >
+      <div className={title && "container space-y-16"}>
+        {title && (
+          <div className="flex flex-col gap-[34px] items-center">
+            <h2 className="sm:text-h3 lg:text-h2">{title}</h2>
+            <span className="w-28 h-1 bg-yellow block mx-auto"></span>
+          </div>
+        )}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 text-center gap-y-10 gap-x-4 lg:gap-12">
           {blogPosts.map((item) => (
             <div key={item} className="w-full">

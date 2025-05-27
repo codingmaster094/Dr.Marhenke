@@ -12,7 +12,7 @@ const page = ({
     <section className={` py-14 lg:py-20 2xl:py-100 bg-opacity-25 ${bgColor ? bgColor : ""}`}>
     <div className="container space-y-16">
 
-        <div  className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-4 xl:gap-16`}>
+        <div  className={`flex flex-col items-start ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-4 xl:gap-16`}>
     <div className="lg:w-6/12 self-stretch rounded md:rounded-3xl overflow-hidden">
       <Image src={imageSrc} alt="Service Image" width={808} height={416} className="size-full object-cover object-top" />
     </div>

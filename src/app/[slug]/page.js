@@ -7,7 +7,7 @@ import SliderSection from "../components/SliderSection";
 import TeamsProfile from "../components/TeamsProfile";
 import No_slug_page from "../components/No_slug_page";
 
-const Page = async ({ params }) => {
+const Page = async({ params }) => {
   const { slug } = params;
   let Hero_data = null;
   let Service_data = null;
