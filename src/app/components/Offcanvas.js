@@ -6,13 +6,9 @@ import { usePathname } from "next/navigation";
 
 export default function OffCanvas() {
   const [isOpen, setIsOpen] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [submenuOpenBehandlungen, setSubmenuOpenBehandlungen] = useState(false);
+  const [submenuOpenUeberUns, setSubmenuOpenUeberUns] = useState(false);
   const pathname = usePathname();
-
-  const handleToggleSubmenu = (e) => {
-    e.stopPropagation();
-    setSubmenuOpen((prev) => !prev);
-  };
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -30,7 +26,7 @@ export default function OffCanvas() {
         aria-label="Main Menu"
         className="p-2 sm:p-3 2xl:py-4 2xl:px-8 cursor-pointer inline-block bg-yellow rounded sm:rounded-[10px] hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors lg:hidden"
       >
-        {/* Chevron Icon */}
+        {/* Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -41,23 +37,18 @@ export default function OffCanvas() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className={`icon icon-tabler icons-tabler-outline icon-tabler-chevron-down transform transition-transform duration-300 ${
-            submenuOpen ? "rotate-180" : "rotate-0"
-          }`}
+          className="icon icon-tabler icon-tabler-menu"
         >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M7 6h10" />
-          <path d="M4 12h16" />
-          <path d="M7 12h13" />
-          <path d="M7 18h10" />
+          <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
-      {/* Overlay (Backdrop) */}
+      {/* Overlay */}
       <div
         className={`z-[99999] fixed inset-0 backdrop-blur-sm transition-opacity ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
+        onClick={closeMenu}
       ></div>
 
       {/* Sidebar */}
@@ -82,16 +73,15 @@ export default function OffCanvas() {
               className="cursor-pointer"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
-              <path d="M9 9l6 6m0 -6l-6 6" />
+              <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Navigation Menu */}
+        {/* Navigation */}
         <nav className="p-4 space-y-3 uppercase text-black text-opacity-65">
-          <ul className="md:space-y-4 space-y-0">
-            {/* Start Link */}
+          <ul className="space-y-2">
+            {/* START */}
             <li>
               <Link
                 href="/"
@@ -104,12 +94,12 @@ export default function OffCanvas() {
               </Link>
             </li>
 
-            {/* Behandlungen with Submenu */}
-            <li className="relative group">
+            {/* BEHANDLUNGEN */}
+            <li className="relative">
               <div className="flex justify-between items-center">
                 <Link
                   href="/behandlungen"
-                  className={`flex py-2 ${
+                  className={`block py-2 ${
                     isSubmenuActive([
                       "/behandlungen",
                       "/behandlungen/einzel-und-gruppentherapie",
@@ -125,52 +115,36 @@ export default function OffCanvas() {
                 >
                   Behandlungen
                 </Link>
-                {/* Chevron for submenu toggle */}
-                <div onClick={handleToggleSubmenu}>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSubmenuOpenBehandlungen((prev) => !prev);
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`icon icon-tabler icons-tabler-outline icon-tabler-chevron-down transition-transform duration-300 ${
-                      submenuOpen ? "rotate-180" : "rotate-0"
-                    } ${
-                      isSubmenuActive([
-                        "/behandlungen",
-                        "/behandlungen/einzel-und-gruppentherapie",
-                        "/behandlungen/paar-und-sexualtherapie",
-                        "/behandlungen/kinder-und-jugendlichenpsychotherapie",
-                        "/behandlungen/online-psychotherapie",
-                        "/behandlungen/psy-rena",
-                      ])
-                        ? "text-yellow hover:text-yellow"
-                        : ""
+                    className={`transition-transform duration-300 ${
+                      submenuOpenBehandlungen ? "rotate-180" : "rotate-0"
                     }`}
                   >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M6 9l6 6l6 -6" />
+                    <path d="M6 9l6 6 6-6" />
                   </svg>
-                </div>
+                </button>
               </div>
-
-              {/* Submenu Items */}
               <ul
-                className={`transition-all duration-500 p-0 ease-in-out overflow-hidden bg-white shadow-md ${
-                  submenuOpen
+                className={`transition-all duration-500 overflow-hidden bg-white shadow-md ${
+                  submenuOpenBehandlungen
                     ? "max-h-[500px] opacity-100 visible"
-                    : "max-h-0 opacity-0 invisible p-0"
+                    : "max-h-0 opacity-0 invisible"
                 }`}
-                style={{
-                  transition:
-                    "max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s, padding 0.3s",
-                }}
               >
-                {/* Submenu Links */}
                 {[
                   {
                     href: "/behandlungen/einzel-und-gruppentherapie",
@@ -210,20 +184,80 @@ export default function OffCanvas() {
               </ul>
             </li>
 
-            {/* Über Uns */}
-            <li>
-              <Link
-                href="/ueber-uns"
-                className={`block py-2 ${
-                  isActive("/ueber-uns") ? "text-yellow hover:text-yellow" : ""
+            {/* ÜBER UNS */}
+            <li className="relative">
+              <div className="flex justify-between items-center">
+                <Link
+                  href="/ueber-uns"
+                  className={`block py-2 ${
+                    isSubmenuActive([
+                      "/ueber-uns",
+                      "/koeln-rodenkirchen",
+                      "/koeln-suedstadt",
+                    ])
+                      ? "text-yellow hover:text-yellow"
+                      : ""
+                  }`}
+                  onClick={closeMenu}
+                >
+                  Über uns
+                </Link>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSubmenuOpenUeberUns((prev) => !prev);
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${
+                      submenuOpenUeberUns ? "rotate-180" : "rotate-0"
+                    }`}
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+              </div>
+              <ul
+                className={`transition-all duration-500 overflow-hidden bg-white shadow-md ${
+                  submenuOpenUeberUns
+                    ? "max-h-[500px] opacity-100 visible"
+                    : "max-h-0 opacity-0 invisible"
                 }`}
-                onClick={closeMenu}
               >
-                ÜBER UNS
-              </Link>
+                {[
+                  {
+                    href: "/koeln-rodenkirchen",
+                    label: "Köln Rodenkirchen",
+                  },
+                  {
+                    href: "/koeln-suedstadt",
+                    label: "Köln Südstadt",
+                  },
+                ].map((item) => (
+                  <li key={item.href} className="px-3 py-1">
+                    <Link
+                      href={item.href}
+                      className={`${
+                        isActive(item.href)
+                          ? "text-yellow hover:text-yellow"
+                          : ""
+                      }`}
+                      onClick={closeMenu}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
-
-            {/* Kooperationen */}
             <li>
               <Link
                 href="/kooperationen"

@@ -26,7 +26,12 @@ const Header = () => {
           {/* Logo */}
           <div className="logo">
             <Link href="/">
-              <Image src="/images/logo.svg" alt="Logo" width={286} height={66} />
+              <Image
+                src="/images/logo.svg"
+                alt="Logo"
+                width={286}
+                height={66}
+              />
             </Link>
           </div>
 
@@ -37,7 +42,9 @@ const Header = () => {
                 <li>
                   <Link
                     href="/"
-                    className={pathname === "/" ? "text-yellow hover:shadow" : ""}
+                    className={
+                      pathname === "/" ? "text-yellow hover:shadow" : ""
+                    }
                   >
                     START
                   </Link>
@@ -64,7 +71,12 @@ const Header = () => {
                     <li>
                       <Link
                         href="/behandlungen/einzel-und-gruppentherapie"
-                        className={pathname === "/behandlungen/einzel-und-gruppentherapie" ? "text-yellow hover:shadow" : ""}
+                        className={
+                          pathname ===
+                          "/behandlungen/einzel-und-gruppentherapie"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
                       >
                         Einzel und Gruppentherapie
                       </Link>
@@ -72,7 +84,11 @@ const Header = () => {
                     <li>
                       <Link
                         href="/behandlungen/paar-und-sexualtherapie"
-                        className={pathname === "/behandlungen/paar-und-sexualtherapie" ? "text-yellow hover:shadow" : ""}
+                        className={
+                          pathname === "/behandlungen/paar-und-sexualtherapie"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
                       >
                         Paar und Sexualtherapie
                       </Link>
@@ -80,7 +96,12 @@ const Header = () => {
                     <li>
                       <Link
                         href="/behandlungen/kinder-und-jugendlichenpsychotherapie"
-                        className={pathname === "/behandlungen/kinder-und-jugendlichenpsychotherapie" ? "text-yellow hover:shadow" : ""}
+                        className={
+                          pathname ===
+                          "/behandlungen/kinder-und-jugendlichenpsychotherapie"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
                       >
                         Kinder und Jugendlichenpsychotherapie
                       </Link>
@@ -88,7 +109,11 @@ const Header = () => {
                     <li>
                       <Link
                         href="/behandlungen/online-psychotherapie"
-                        className={pathname === "/behandlungen/online-psychotherapie" ? "text-yellow hover:shadow" : ""}
+                        className={
+                          pathname === "/behandlungen/online-psychotherapie"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
                       >
                         Online Psychotherapie
                       </Link>
@@ -96,25 +121,63 @@ const Header = () => {
                     <li>
                       <Link
                         href="/behandlungen/psy-rena"
-                        className={pathname === "/behandlungen/psy-rena" ? "text-yellow hover:shadow" : ""}
+                        className={
+                          pathname === "/behandlungen/psy-rena"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
                       >
                         Psy Rena
                       </Link>
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li className="relative group menu-item-has-children">
                   <Link
                     href="/ueber-uns"
-                    className={pathname === "/ueber-uns" ? "text-yellow hover:shadow" : ""}
+                    className={
+                      pathname === "/ueber-uns"
+                        ? "text-yellow hover:shadow"
+                        : ""
+                    }
                   >
-                    ÜBER UNS
+                    Über uns
                   </Link>
+                  <ul className="z-50 sub-menu absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all bg-white shadow-md mt-2 py-2 px-4 ">
+                    <li>
+                      <Link
+                        href="/koeln-rodenkirchen"
+                        className={
+                          pathname === "/koeln-rodenkirchen"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
+                      >
+                        Koeln-Rodenkirchen
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/koeln-suedstadt"
+                        className={
+                          pathname === "/koeln-suedstadt"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
+                      >
+                        Koeln-Suedstadt
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <Link
                     href="/kooperationen"
-                    className={pathname === "/kooperationen" ? "text-yellow hover:shadow" : ""}
+                    className={
+                      pathname === "/kooperationen"
+                        ? "text-yellow hover:shadow"
+                        : ""
+                    }
                   >
                     Kooperationen
                   </Link>

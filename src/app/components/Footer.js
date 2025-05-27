@@ -112,7 +112,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <ul>
+            {/* <ul>
               <li className="flex gap-4">
                 <Link
                   role="link"
@@ -177,7 +177,7 @@ const Footer = () => {
                   </svg>
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="space-y-6 shrink-0">
             <div className="text-p *:font-bold">

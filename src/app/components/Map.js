@@ -2,7 +2,7 @@ import React from 'react'
 const Map = () => {
   return (
     <section className="py-14 lg:py-20 2xl:py-100 text-center bg-[#FFF2CE] bg-opacity-25">
-    <div className="">
+    <div className="container">
       <div>
         <h2 className="mb-4">
         Praxis für Psychotherapie Dr. Marhenke: unsere Standorte in Köln

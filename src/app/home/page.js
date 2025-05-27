@@ -22,6 +22,7 @@ const page = () => {
         buttonText="Jetzt Termin vereinbaren"
         buttonLink="/kontakt"
         imageSrc="/images/hero-img.png"
+        videoSrc="/vedio/home.mp4"
       />
       <Psychotherapeuten />
       <Pattern_section btn={true}/>

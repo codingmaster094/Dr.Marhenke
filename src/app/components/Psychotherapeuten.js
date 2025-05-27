@@ -104,7 +104,11 @@ const Psychotherapeuten = () => {
                 <div className="sm:p-6">
                   <div className="sm:p-6 rounded-3xl bg-transparent hover:bg-white transition-all sm:hover:shadow-[0_4px_34px_0_rgba(0,0,0,.08)]">
                     <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
-                      <img role="img" src="/images/body-icon.svg" alt="Icon" />
+                      <img
+                        role="img"
+                        src="/images/Simplification-1.svg"
+                        alt="Icon"
+                      />
                     </div>
                     <h3 className="mb-2 lg:mt-6 font-bold text-lg sm:text-[21px] min-h-14">
                       Einzel- & Gruppentherapie
@@ -129,7 +133,7 @@ const Psychotherapeuten = () => {
                     <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
                       <img
                         role="img"
-                        src="/images/save-health.svg"
+                        src="/images/Simplification-4.svg"
                         alt="Icon"
                       />
                     </div>
@@ -155,7 +159,11 @@ const Psychotherapeuten = () => {
                 <div className="sm:p-6">
                   <div className="sm:p-6 rounded-3xl bg-transparent hover:bg-white transition-all sm:hover:shadow-[0_4px_34px_0_rgba(0,0,0,.08)]">
                     <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
-                      <img role="img" src="/images/men-icon.svg" alt="Icon" />
+                      <img
+                        role="img"
+                        src="/images/Simplification.svg"
+                        alt="Icon"
+                      />
                     </div>
                     <h3 className="mb-2 lg:mt-6 font-bold text-lg sm:text-[21px] min-h-14">
                       Kinder- und Jugendlichenpsychotherapie
@@ -180,7 +188,7 @@ const Psychotherapeuten = () => {
                     <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
                       <img
                         role="img"
-                        src="/images/save-health.svg"
+                        src="/images/Simplification-3.svg"
                         alt="Icon"
                       />
                     </div>
@@ -205,7 +213,11 @@ const Psychotherapeuten = () => {
                 <div className="sm:p-6">
                   <div className="sm:p-6 rounded-3xl bg-transparent hover:bg-white transition-all sm:hover:shadow-[0_4px_34px_0_rgba(0,0,0,.08)]">
                     <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
-                      <img role="img" src="/images/body-icon.svg" alt="Icon" />
+                      <img
+                        role="img"
+                        src="/images/Simplification-2.svg"
+                        alt="Icon"
+                      />
                     </div>
                     <h3 className="mb-2 lg:mt-6 font-bold text-lg sm:text-[21px] min-h-14">
                       Psy-RENA

@@ -81,7 +81,7 @@ const Uber_AboutSection = ({params}) => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-8">
+        {/* <div className="flex justify-center mt-8">
           <Link
             role="link"
             href="/"
@@ -89,7 +89,7 @@ const Uber_AboutSection = ({params}) => {
           >
             Mehr erfahren
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

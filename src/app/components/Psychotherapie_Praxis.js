@@ -51,12 +51,12 @@ const Psychotherapie_Praxis = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 text-center flex-wrap justify-center">
+        <div className="flex flex-col lg:flex-row gap-8 xl:gap-16 text-center xl:flex-nowrap flex-wrap justify-center">
           <div className="lg:w-[calc(50%-32px)] 2xl:w-[calc(33.33%-42.67px)] p-4 sm:p-6 sm:rounded-3xl bg-white shadow-custom_shdow2 hover:shadow-2xl transition-all">
             <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
               <Image
                 role="img"
-                src="images/men-icon.svg"
+                src="images/Simplification-2.svg"
                 alt="men-icon"
                 width={52}
                 height={52}
@@ -110,7 +110,7 @@ const Psychotherapie_Praxis = ({
             <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
               <Image
                 role="img"
-                src="images/save-health.svg"
+                src="images/Simplification-2.svg"
                 alt="save-health"
                 width={52}
                 height={52}
@@ -165,7 +165,7 @@ const Psychotherapie_Praxis = ({
             <div className="scale-75 lg:scale-100 size-[100px] rounded-[10px] grid place-items-center bg-yellow mx-auto shadow-[0_4px_18px_0_rgba(0,0,0,.14)]">
               <Image
                 role="img"
-                src="images/body-icon.svg"
+                src="images/Simplification-2.svg"
                 alt="body-icon"
                 width={52}
                 height={52}

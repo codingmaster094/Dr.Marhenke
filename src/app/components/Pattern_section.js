@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-const Pattern_section = ({btn}) => {
+const Pattern_section = ({btn , BTN}) => {
   return (
     <section className="py-14 lg:py-20 bg-yellow text-white text-center bg-[url(/images/bg-pattern.png)] bg-cover">
       <div className="container">
@@ -26,7 +26,7 @@ const Pattern_section = ({btn}) => {
             className="inline-block w-fit text-yellow bg-white rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-white hover:shadow hover:shadow-white transition-colors font-medium"
             href="/"
           >
-            Jetzt kontaktieren
+            {BTN ? BTN : 'Jetzt kontaktieren'}
           </Link>
           }
         </div>
