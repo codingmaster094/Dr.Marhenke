@@ -39,7 +39,7 @@
   }
   .content-listing ul,
   .list-style-arrow {
-    @apply list-image-[url(/images/list-img.svg)];
+    @apply list-image-[url(/images/bulletpoint.svg)];
   }
   .wpcf7-form .f-fild {
     @apply mb-5;
