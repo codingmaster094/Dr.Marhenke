@@ -24,7 +24,7 @@ const page = () => {
           "Individuelle Therapieangebote für Mitglieder der GKV, PKV & DRV",
         ]}
         buttonText="Jetzt Termin vereinbaren"
-        buttonLink="/"
+        buttonLink="/kontakt"
         imageSrc="/images/about-us-hero.png"
       />
       <About_Service_section

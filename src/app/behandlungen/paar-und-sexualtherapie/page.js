@@ -17,7 +17,7 @@ const page = () => {
           "Kurzfristige Termine, individuelle Beratung & Therapie-Konzepte",
         ]}
         buttonText="Jetzt Termin vereinbaren"
-        buttonLink="/"
+        buttonLink="/kontakt"
         imageSrc="/images/treatments-hero.png"
       />
       <Kooperationspartner />

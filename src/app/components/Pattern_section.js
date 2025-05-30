@@ -19,16 +19,15 @@ const Pattern_section = ({btn , BTN}) => {
               Termin zu vereinbaren.
             </p>
           </div>
-          {
-            btn && 
-          <Link
-            role="link"
-            className="inline-block w-fit text-yellow bg-white rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-white hover:shadow hover:shadow-white transition-colors font-medium"
-            href="/"
-          >
-            {BTN ? BTN : 'Jetzt kontaktieren'}
-          </Link>
-          }
+          {btn && (
+            <Link
+              role="link"
+              className="inline-block w-fit text-yellow bg-white rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-white hover:shadow hover:shadow-white transition-colors font-medium"
+              href="/kontakt"
+            >
+              {BTN ? BTN : "Jetzt kontaktieren"}
+            </Link>
+          )}
         </div>
       </div>
     </section>

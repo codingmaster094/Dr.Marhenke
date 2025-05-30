@@ -23,13 +23,8 @@ const Footer = () => {
               <p>Kontakt</p>
             </div>
             <ul className="space-y-5">
-              <li>
-                <Link
-                  role="link"
-                  className="flex gap-3 items-start"
-                  href="/"
-                  target="_blank"
-                >
+              <li className="flex gap-3 items-start">
+
                   <svg
                     className="shrink-0 mt-1"
                     width="18"
@@ -61,7 +56,7 @@ const Footer = () => {
                   Gustav-Radbruch-Straße 1
                   50996 Köln
                   </span>
-                </Link>
+       
               </li>
               <li>
                 <Link
@@ -216,27 +211,27 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link role="link" className="link" href="">
+                <Link role="link" className="link" href="koeln-rodenkirchen">
                   Rodenkirchen
                 </Link>
               </li>
               <li>
-                <Link role="link" className="link" href="">
+                <Link role="link" className="link" href="koeln-suedstadt">
                 Südstadt
                 </Link>
               </li>
               <li>
-                <Link role="link" className="link" href="">
+                <Link role="link" className="link" href="huerth">
                 Hürth
                 </Link>
               </li>
               <li>
-                <Link role="link" className="link" href="/kooperationen">
+                <Link role="link" className="link" href="kooperationen">
                   Kooperationen
                 </Link>
               </li>
               <li>
-                <Link role="link" className="link" href="/kontakt">
+                <Link role="link" className="link" href="kontakt">
                   Kontakt
                 </Link>
               </li>

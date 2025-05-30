@@ -15,11 +15,12 @@ const Hero_Section = ({
     <section className="container">
       <div className="flex flex-col-reverse lg:flex-row gap-6">
         <div className="lg:w-6/12 py-8 flex flex-col justify-center gap-5 sm:gap-[34px]">
-          <h1 className="text-h1">
-            <span className="text-yellow">{title}</span>
-            <br />
-            {subtitle}
-          </h1>
+          <h1
+            className="text-h1 yellow-color"
+            dangerouslySetInnerHTML={{ __html: title }}
+          ></h1>
+          <br />
+          {subtitle}
           <div className="content-listing">
             <ul className="space-y-4 ml-6">
               {points?.map((point, index) => (

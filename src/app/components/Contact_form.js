@@ -144,7 +144,7 @@ const Contact_form = () => {
   };
 
   return (
-    <section className="pb-14 lg:pb-20 2xl:pb-100">
+    <section className="pb-14 lg:pb-20 2xl:pb-100" id="contact-form">
       <div className="container">
         <div className="grid lg:grid-cols-2 bg-yellow text-white gap-8 sm:gap-16 p-4 sm:py-12 sm:px-9 rounded lg:rounded-2xl 3xl:rounded-3xl">
           <div>

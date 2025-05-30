@@ -49,7 +49,7 @@ const Kooperationspartner = () => {
               </svg>
             </div>
             <Swiper
-            className="partnersSwiper"
+              className="partnersSwiper"
               ref={swiperRef}
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={10}
@@ -76,85 +76,85 @@ const Kooperationspartner = () => {
               }}
             >
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/client-logo-1.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/client-logo-1.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/client-logo-2.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/client-logo-2.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/client-logo-3.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/client-logo-3.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/client-logo-4.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/client-logo-4.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/client-logo-5.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/client-logo-5.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/partner-logo-4.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/partner-logo-4.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/kbap.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/kbap.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/DM_Logo_4c.png"
-                    width={229}
-                    height={102}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/DM_Logo_4c.png"
+                  width={229}
+                  height={102}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                  <Image
-                    role="img"
-                    src="/images/apk.jpeg"
-                    width={153}
-                    height={142}
-                    alt="Partner's logo"
-                  />
+                <Image
+                  role="img"
+                  src="/images/apk.jpeg"
+                  width={153}
+                  height={142}
+                  alt="Partner's logo"
+                />
               </SwiperSlide>
             </Swiper>
             <div
@@ -180,7 +180,7 @@ const Kooperationspartner = () => {
           </div>
           <Link
             role="link"
-            href="/"
+            href="/kooperationen"
             className="inline-block text-white bg-yellow rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors font-medium"
           >
             Mehr erfahren

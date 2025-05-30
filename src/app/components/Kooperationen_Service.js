@@ -22,7 +22,7 @@ const Kooperationen_Service = ({
         >
           <div className="lg:w-6/12 self-stretch p-5 sm:p-10 3xl:aspect-[1.95/1] rounded md:rounded-3xl overflow-hidden shadow-[0_4px_34px_0_rgba(0,0,0,.08)] bg-white grid place-items-center relative">
             <div className="">
-              <img className="" src={imageSrc} alt="Partner's image" />
+              <Image className="" width={155} height={145} src={imageSrc} alt="Partner's image" />
             </div>
           </div>
           <div className="lg:w-6/12 flex flex-col justify-center gap-[34px]">

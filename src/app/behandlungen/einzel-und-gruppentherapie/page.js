@@ -16,17 +16,17 @@ const page = () => {
           "Unterstützung bei der persönlichen Entwicklung",
           "Kurzfristige Termine, individuelle Beratung & Therapie-Konzepte",
         ]}
-         buttonText="Jetzt Termin vereinbaren"
-        buttonLink="/"
+        buttonText="Jetzt Termin vereinbaren"
+        buttonLink="/kontakt"
         imageSrc="/images/treatments-hero.png"
       />
 
       <Kooperationspartner />
 
       <About_Service_section
-         title="Einzeltherapie – Ihr geschützter Raum zur persönlichen Entwicklung"
-         imageSrc="/images/treatment-img-1.png"
-         description={[
+        title="Einzeltherapie – Ihr geschützter Raum zur persönlichen Entwicklung"
+        imageSrc="/images/treatment-img-1.png"
+        description={[
           "Die Einzeltherapie bietet einen vertraulichen Rahmen, um persönliche Herausforderungen zu besprechen. In den Sitzungen arbeiten Sie gemeinsam mit Ihrem Therapeuten daran, belastende Gedanken und Verhaltensmuster zu reflektieren und gezielt zu verändern.",
         ]}
         listItems={[
@@ -39,7 +39,7 @@ const page = () => {
         reverse={false}
       />
       <About_Service_section
-         title="Gruppentherapie – Unterstützung durch Austausch"
+        title="Gruppentherapie – Unterstützung durch Austausch"
         description={[
           "In der Gruppe entsteht eine besondere Dynamik, die Heilungsprozesse fördern kann. Der Austausch mit anderen zeigt, dass man mit seinen Problemen nicht allein ist. Außerdem kann das Feedback der Gruppe neue Perspektiven eröffnen und das Selbstwertgefühl stärken.",
         ]}
@@ -53,7 +53,7 @@ const page = () => {
         reverse={true}
       />
       <About_Service_section
-         title="Kombinationstherapie – persönliche Reflexion & Austausch mit anderen"
+        title="Kombinationstherapie – persönliche Reflexion & Austausch mit anderen"
         description={[
           "Viele Patienten profitieren von einer Kombination aus Einzel- und Gruppentherapie. Während die Einzeltherapie Raum für persönliche Reflexion bietet, ermöglicht die Gruppentherapie das Üben sozialer Kompetenzen und den Austausch mit anderen.",
         ]}
@@ -68,7 +68,7 @@ const page = () => {
       />
 
       <FAQ_section
-      title="FAQ zur Einzel- & Gruppentherapie"
+        title="FAQ zur Einzel- & Gruppentherapie"
         faqs={[
           {
             question: "Was ist eine Einzeltherapie?",
@@ -87,9 +87,10 @@ const page = () => {
             answer: `Zum ersten Termin bringen Sie das Versichertenkärtchen (elektronische Gesundheitskarte) bei gesetzlicher Versicherung bzw. die Daten Ihrer privaten Versicherung bei Privatversicherten (Name und Anschrift der privaten Krankenversicherung).`,
           },
           {
-            question: "Was passiert, wenn ich einen Termin kurzfristig absagen muss?",
+            question:
+              "Was passiert, wenn ich einen Termin kurzfristig absagen muss?",
             answer: `Wenn Sie eine Einzelsitzung bis zu 2 Werktage vor dem geplanten Termin schriftlich per E-Mail an kontakt[@]psycho-therapie-koeln.de absagen, gilt der Termin als storniert und Sie können gleich einen neuen Termin vereinbaren. Bei der Absage einer Einzelsitzung innerhalb von 2 Werktagen vor dem Termin oder einer unentschuldigten Absage wird ein sogenanntes Ausfallhonorar erhoben, welches den Verdienstausfall des Therapeuten ersetzt. Die Höhe des Ausfallhonorars beträgt i. d. R. 102,57 € (orientierend am Stundensatz für Psychotherapie) und wird weder von den gesetzlichen noch von den privaten Krankenkassen erstattet. In beidseitigem Interesse empfehlen wir Ihnen, uns Ihren Stornierungswunsch rechtzeitig mitzuteilen.`,
-          }
+          },
         ]}
       />
     </>

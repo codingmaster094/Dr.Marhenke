@@ -16,14 +16,14 @@ const page = () => {
           "Kurzfristige Termine, individuelle Beratung & Therapie-Konzepte",
         ]}
         buttonText="Jetzt Termin vereinbaren"
-        buttonLink="/"
+        buttonLink="/kontakt"
         imageSrc="/images/services-hero.png"
       />
 
       <ServiceSection
         title="Einzel- & Gruppentherapie – individuelle oder gemeinschaftliche Unterstützung"
         description={[
-          "Einzel- und Gruppentherapie bieten unterschiedliche Wege, um psychische Belastungen zu bewältigen. Während die Einzeltherapie Raum für persönliche Themen schafft, ermöglicht Gruppentherapie den Austausch mit anderen und die Stärkung sozialer Kompetenzen."
+          "Einzel- und Gruppentherapie bieten unterschiedliche Wege, um psychische Belastungen zu bewältigen. Während die Einzeltherapie Raum für persönliche Themen schafft, ermöglicht Gruppentherapie den Austausch mit anderen und die Stärkung sozialer Kompetenzen.",
         ]}
         listItems={[
           "Einzeltherapie: individuelle Begleitung bei psychischen Belastungen, Ängsten & Depressionen",
@@ -40,24 +40,24 @@ const page = () => {
       <ServiceSection
         title="Paar- & Sexualtherapie - Beziehungen stärken & Nähe schaffen"
         description={[
-          "Eine erfüllte Beziehung basiert auf Kommunikation, Vertrauen und Intimität. Doch Konflikte, Stress oder unausgesprochene Wünsche können zu Missverständnissen und Distanz führen. In der Paartherapie helfen wir Ihnen, Streit zu lösen, das gegenseitige Verständnis zu verbessern und eine tiefere Verbindung aufzubauen." ,
+          "Eine erfüllte Beziehung basiert auf Kommunikation, Vertrauen und Intimität. Doch Konflikte, Stress oder unausgesprochene Wünsche können zu Missverständnissen und Distanz führen. In der Paartherapie helfen wir Ihnen, Streit zu lösen, das gegenseitige Verständnis zu verbessern und eine tiefere Verbindung aufzubauen.",
 
-          "Bei sexuellen Funktionsstörungen, Lustlosigkeit oder UnsicherheitenAuch unsere Sexualtherapie bietet Raum, um Herausforderungen anzusprechen - sei es bei sexuellen Funktionsstörungen, Lustlosigkeit oder Unsicherheiten. Wir begleiten Sie dabei, Blockaden zu lösen und eine erfüllte Sexualität zu entwickeln – individuell oder als Paar."
+          "Bei sexuellen Funktionsstörungen, Lustlosigkeit oder UnsicherheitenAuch unsere Sexualtherapie bietet Raum, um Herausforderungen anzusprechen - sei es bei sexuellen Funktionsstörungen, Lustlosigkeit oder Unsicherheiten. Wir begleiten Sie dabei, Blockaden zu lösen und eine erfüllte Sexualität zu entwickeln – individuell oder als Paar.",
         ]}
         listItems={[]}
         bgColor=""
         buttonText="Mehr erfahren"
         buttonLink="/"
         imageSrc="/images/service-img-4.png"
-        reverse={true} 
+        reverse={true}
       />
 
-      <Pattern_section btn={true}/>
+      <Pattern_section btn={true} />
 
       <ServiceSection
         title="Kinder- & Jugendlichenpsychotherapie – Unterstützung für junge Menschen"
         description={[
-          "Kinder und Jugendliche erleben psychische Belastungen oft anders als Erwachsene. Manche ziehen sich zurück, andere reagieren mit Wutausbrüchen oder Unsicherheiten im sozialen Umfeld. Eine psychotherapeutische Begleitung kann helfen, emotionale Herausforderungen zu bewältigen und das Selbstbewusstsein zu stärken. Dann kann eine Therapie sinnvoll sein:"
+          "Kinder und Jugendliche erleben psychische Belastungen oft anders als Erwachsene. Manche ziehen sich zurück, andere reagieren mit Wutausbrüchen oder Unsicherheiten im sozialen Umfeld. Eine psychotherapeutische Begleitung kann helfen, emotionale Herausforderungen zu bewältigen und das Selbstbewusstsein zu stärken. Dann kann eine Therapie sinnvoll sein:",
         ]}
         listItems={[
           "Anhaltende Ängste, sozialer Rückzug oder starke Stimmungsschwankungen",
@@ -74,7 +74,7 @@ const page = () => {
       <ServiceSection
         title="Online-Psychotherapie – flexibel & ortsunabhängig"
         description={[
-          "Nicht jeder kann regelmäßig eine Praxis aufsuchen. Online-Psychotherapie ermöglicht Ihnen trotzdem professionelle Unterstützung. Einfach von zuhause aus – sicher & datenschutzkonform."
+          "Nicht jeder kann regelmäßig eine Praxis aufsuchen. Online-Psychotherapie ermöglicht Ihnen trotzdem professionelle Unterstützung. Einfach von zuhause aus – sicher & datenschutzkonform.",
         ]}
         listItems={[
           "Flexibilität: Therapie unabhängig von Ort & Zeit",
@@ -85,15 +85,15 @@ const page = () => {
         buttonText="Mehr erfahren"
         buttonLink="/"
         imageSrc="/images/service-img-6.png"
-        reverse={true} 
+        reverse={true}
       />
 
-    <Pattern_section btn={true}/>
+      <Pattern_section btn={true} />
 
-    <ServiceSection
+      <ServiceSection
         title="Psy-RENA – begleitete Reha-Nachsorge für langfristige Stabilität"
         description={[
-          "Nach einer psychosomatischen Rehabilitation ist eine gezielte Nachsorge wichtig, um Therapieerfolge zu sichern. Psy-RENA hilft dabei, Gelerntes langfristig in den Alltag zu integrieren. Das Programm umfasst:"
+          "Nach einer psychosomatischen Rehabilitation ist eine gezielte Nachsorge wichtig, um Therapieerfolge zu sichern. Psy-RENA hilft dabei, Gelerntes langfristig in den Alltag zu integrieren. Das Programm umfasst:",
         ]}
         listItems={[
           "Gruppensitzungen zur Stabilisierung nach der Reha",
@@ -107,9 +107,9 @@ const page = () => {
         reverse={false}
       />
 
-     <Kooperationspartner/>
-     <Review_section bg='bg-[#FFF2CE]'/>
-     <Pattern_section btn={false}/>
+      <Kooperationspartner />
+      <Review_section bg="bg-[#FFF2CE]" />
+      <Pattern_section btn={false} />
     </>
   );
 };

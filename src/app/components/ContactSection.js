@@ -71,7 +71,7 @@ const ContactSection = () => {
               <div>
                 <Link
                   role="link"
-                  href="tel:(+12)7 66 59 45 68"
+                  href="/kontakt#contact-form"
                   className="inline-block text-white bg-yellow rounded sm:rounded-[10px] py-2 px-6 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors xl:text-lg font-medium"
                 >
                   Jetzt kontaktieren
