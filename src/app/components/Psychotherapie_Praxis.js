@@ -207,7 +207,7 @@ const Psychotherapie_Praxis = ({
             </div>
             <Link
               role="link"
-              href="/koeln-huerth/"
+              href="/huerth"
               aria-label="Mehr erfahren"
               target="_self"
               className="block w-fit mx-auto text-yellow lg:text-lg rounded sm:rounded-[10px] border border-yellow py-2 2xl:py-[15px] px-4 2xl:px-8 hover:bg-yellow hover:shadow hover:text-white transition-colors"

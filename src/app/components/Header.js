@@ -168,6 +168,18 @@ const Header = () => {
                         Koeln-Suedstadt
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href="/huerth"
+                        className={
+                          pathname === "/huerth"
+                            ? "text-yellow hover:shadow"
+                            : ""
+                        }
+                      >
+                        Koeln-Hürth
+                      </Link>
+                    </li>
                   </ul>
                 </li>
                 <li>

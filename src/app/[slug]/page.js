@@ -123,8 +123,66 @@ const Page = async({ params }) => {
       },
     ];
   }
+  if (slug === "huerth") {
+    Hero_data = [
+      {
+        title: "Psychotherapie in Köln Hürth:",
+        subtitle: "gemeinsam neue Wege gehen",
+        points: [
+          "Einzel-, Gruppen- & Paartherapien",
+          "Online-Therapie & Reha-Nachsorge für flexible Unterstützung",
+          "Kurzfristige Termine, individuelle Beratung & Therapie-Konzepte",
+        ],
+        buttonText: "Termin vereinbaren",
+        buttonLink: "/kontakt",
+        imageSrc: "/images/location-hero.webp",
+      },
+    ];
 
-  if (slug !== "koeln-rodenkirchen" && slug !== "koeln-suedstadt") {
+    Service_data = [
+      {
+        title: "Das ist unsere Praxis für Psychotherapie in Köln Hürth",
+        description: [
+          "Unsere Psychotherapie-Praxis in Köln Hürth liegt in zentraler Lage und hat eine gute eine Anbindung an öffentliche Verkehrsmittel – auch Parkmöglichkeiten vor Ort sind vorhanden. In unserer Praxis bieten Ihnen eine sichere und vertrauensvolle Umgebung für Ihre Therapie. Helle und freundliche Räume in einem klaren und modern Ambiente sorgen für eine angenehme Atmosphäre, in der Sie sich wohl und gut aufgehoben fühlen.",
+        ],
+        listItems: [
+          "Rolandstraße 55, 50677 Köln",
+          "Telefon: 0221/17 00 40 36",
+          "E-Mail: kontakt[@]psycho-therapie-koeln.de",
+        ],
+        bgColor: "",
+        buttonText: "",
+        buttonLink: "",
+        imageSrc: "/images/location-img-1.webp",
+        reverse: false,
+      },
+    ];
+
+    Slider_section_data = [
+      {
+        title: "Unsere Praxis für Psychotherapie in Köln Südstadt",
+        Images: [
+          "/images/location-img-4 (1).webp",
+          "/images/location-img-3.webp",
+          "/images/location-img-2.webp",
+          "/images/location-img-5.webp",
+          "/images/location-img-2.webp",
+        ],
+      },
+    ];
+
+    Team_data = [
+      {
+        title: "Psychotherapie-Praxis in Köln Südstadt: unser Team",
+      },
+    ];
+  }
+
+  if (
+    slug !== "koeln-rodenkirchen" &&
+    slug !== "koeln-suedstadt" &&
+    slug !== "huerth"
+  ) {
     return <No_slug_page />;
   }
   

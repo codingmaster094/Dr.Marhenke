@@ -1,6 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-const Uber_AboutSection = ({params}) => {
+const Uber_AboutSection = ({ params }) => {
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
+
   const blogPosts = [
     {
       id: 1,
@@ -172,7 +181,6 @@ const Uber_AboutSection = ({params}) => {
     },
   ];
 
-
   return (
     <section className="bg-[#FFF2CE] py-14 lg:py-20 2xl:py-[100px] bg-opacity-25">
       <div className="container space-y-16">
@@ -204,7 +212,7 @@ const Uber_AboutSection = ({params}) => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 text-center gap-y-10 gap-x-4 lg:gap-12">
-          {blogPosts.map((item) => (
+          {blogPosts.slice(0, visibleCount).map((item) => (
             <div key={item} className="w-full">
               <div className="relative group">
                 <div className="relative aspect-square">
@@ -243,6 +251,17 @@ const Uber_AboutSection = ({params}) => {
             </div>
           ))}
         </div>
+        {visibleCount < blogPosts.length && (
+          <div className="flex justify-center mt-8">
+            <button
+              role="link"
+              onClick={handleLoadMore}
+              className="inline-block text-white bg-yellow rounded sm:rounded-[10px] p-3 sm:py-3 sm:px-8 hover:bg-transparent hover:text-yellow hover:shadow hover:shadow-yellow transition-colors font-medium"
+            >
+              Mehr anzeigen
+            </button>
+          </div>
+        )}
         {/* <div className="flex justify-center mt-8">
           <Link
             role="link"
