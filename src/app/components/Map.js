@@ -1,23 +1,185 @@
-import React from 'react'
-const Map = () => {
+"use client"; // Ensure this component is client-side only
+
+import { Icon } from "leaflet";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React from "react";
+// Dynamically import react-leaflet components to avoid SSR issues
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((mod) => mod.MapContainer),
+  { ssr: false }
+);
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((mod) => mod.TileLayer),
+  { ssr: false }
+);
+const Marker = dynamic(
+  () => import("react-leaflet").then((mod) => mod.Marker),
+  { ssr: false }
+);
+const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
+  ssr: false,
+});
+const Circle = dynamic(
+  () => import("react-leaflet").then((mod) => mod.Circle),
+  { ssr: false }
+);
+const CircleMarker = dynamic(
+  () => import("react-leaflet").then((mod) => mod.CircleMarker),
+  { ssr: false }
+);
+const Polygon = dynamic(
+  () => import("react-leaflet").then((mod) => mod.Polygon),
+  { ssr: false }
+);
+const Rectangle = dynamic(
+  () => import("react-leaflet").then((mod) => mod.Rectangle),
+  { ssr: false }
+);
+const Tooltip = dynamic(
+  () => import("react-leaflet").then((mod) => mod.Tooltip),
+  { ssr: false }
+);
+
+
+const markers = [
+  {
+    position: [48.1351, 11.582],
+    name: "Munchen, Germany",
+    buttonText: "Mehr erfahren",
+    link: "/huerth",
+  },
+  {
+    position: [50.1109, 8.6821],
+    name: "Darmstadt, Germany",
+    buttonText: "Mehr erfahren",
+    link: "/koeln-suedstadt",
+  },
+  {
+    position: [52.52, 13.405],
+    name: "Berlin, Germany",
+    buttonText: "Mehr erfahren",
+    link: "/koeln-rodenkirchen",
+  },
+];
+
+const customIcon = new Icon({
+    iconUrl: "/images/marker-icon.png",
+    iconSize: [38, 38],
+  });
+
+const center = [48.1351, 11.582]; // Köln
+const multiPolygon = [
+  [
+    [51.51, -0.12],
+    [51.51, -0.13],
+    [51.53, -0.13],
+  ],
+  [
+    [51.51, -0.05],
+    [51.51, -0.07],
+    [51.53, -0.07],
+  ],
+];
+
+const rectangle = [
+  [51.49, -0.08],
+  [51.5, -0.06],
+];
+
+function TooltipCircle() {
+  const [clickedCount, setClickedCount] = React.useState(0);
+  const eventHandlers = React.useMemo(
+    () => ({
+      click() {
+        setClickedCount((count) => count + 1);
+      },
+    }),
+    []
+  );
+
+  const clickedText =
+    clickedCount === 0
+      ? "Click this Circle to change the Tooltip text"
+      : `Circle click: ${clickedCount}`;
+
+  return (
+    <Circle
+      center={center}
+      eventHandlers={eventHandlers}
+      pathOptions={{ fillColor: "blue" }}
+      radius={200}
+    >
+      <Tooltip>{clickedText}</Tooltip>
+    </Circle>
+  );
+}
+
+export default function Map() {
   return (
     <section className="py-14 lg:py-20 2xl:py-100 text-center bg-[#FFF2CE] bg-opacity-25">
     <div className="container">
       <div>
         <h2 className="mb-4">
-        Praxis für Psychotherapie Dr. Marhenke: unsere Standorte in Köln
+          Praxis für Psychotherapie Dr. Marhenke: unsere Standorte in Köln
         </h2>
         <span className="w-28 h-1 bg-yellow block mx-auto"></span>
       </div>
-      <iframe
-        className="aspect-[2.88/1] w-full  mt-16 grayscale"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19564.80647973232!2d11.635575924729926!3d52.196128438246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47af5eb301f0b9a5%3A0x5236659f807e400!2s39126%20Magdeburg-Gewerbegebiet%20Nord%2C%20Germany!5e0!3m2!1sen!2sin!4v1736155302899!5m2!1sen!2sin"
-        style={{ border: 0 }}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  </section>
-  )
+          <MapContainer
+            center={center}
+            zoom={6}
+          >
+            <TileLayer
+              attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {markers.map((marker, i) => {
+              return (
+                <Marker
+                  position={marker.position}
+                  icon={customIcon}
+                  scrollWheelZoom={false}
+                  key={i}
+                >
+                  <Popup>
+                    <div
+                      className="leaflet-popup  leaflet-zoom-animated"
+                      style={{
+                        opacity: 1,
+                        transform: "translate3d(1222px, 66px, 0px)",
+                        bottom: "-7px",
+                        left: "-88px",
+                      }}
+                    >
+                      <div className="leaflet-popup-content-wrapper">
+                        <div
+                          className="leaflet-popup-content"
+                          style={{ width: "135px" }}
+                        >
+                          <p>{marker.name}</p>
+                          <Link className="loc-popup-btn" href={marker.link}>
+                            {marker.buttonText}
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="leaflet-popup-tip-container">
+                        <div className="leaflet-popup-tip"></div>
+                      </div>
+                      <Link
+                        className="leaflet-popup-close-button"
+                        role="button"
+                        aria-label="Close popup"
+                        href="#close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </Link>
+                    </div>
+                  </Popup>
+                </Marker>
+              );
+            })}
+          </MapContainer>
+        </div>
+    </section>
+  );
 }
-export default Map

@@ -1,14 +1,9 @@
 import React from "react";
 import Hero_Section from "../components/Hero_Section";
-import Psychotherapeuten from "../components/Psychotherapeuten";
 import Psychotherapie_Praxis from "../components/Psychotherapie_Praxis";
 import Kooperationspartner from "../components/Kooperationspartner";
-import Pattern_section from "../components/Pattern_section";
-import Team_section from "../components/Team_section";
-import Review_section from "../components/Review_section";
-import FAQ_section from "../components/FAQ_section";
 import About_Service_section from "../components/About_Service_section";
-import Map from "../components/Map";
+import Map from "../Map/page";
 import Uber_AboutSection from "../components/Uber_AboutSection";
 import BlogComponent from "../components/BlogComponent";
 

@@ -15,9 +15,9 @@ const Hero_Section = ({
     <section className="container">
       <div className="flex flex-col-reverse lg:flex-row gap-6">
         <div className="lg:w-6/12 py-8 flex flex-col justify-center gap-5 sm:gap-[34px]">
-        <h1 class="text-h1" 
+        <h1 className="text-h1" 
           >
-            <span class="text-yellow block" dangerouslySetInnerHTML={{ __html: title }}>
+            <span className="text-yellow block" dangerouslySetInnerHTML={{ __html: title }}>
             </span>
             <span dangerouslySetInnerHTML={{ __html: subtitle }}></span> 
           </h1>
