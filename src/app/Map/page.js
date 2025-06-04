@@ -1,24 +1,16 @@
 "use client";
-
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-// Dynamic imports for React-Leaflet components
 const MapContainer = dynamic(
-  () => import("react-leaflet").then((m) => m.MapContainer),
-  { ssr: false }
+  () => import("react-leaflet").then((m) => m.MapContainer)
 );
 const TileLayer = dynamic(
-  () => import("react-leaflet").then((m) => m.TileLayer),
-  { ssr: false }
+  () => import("react-leaflet").then((m) => m.TileLayer)
 );
-const Marker = dynamic(() => import("react-leaflet").then((m) => m.Marker), {
-  ssr: false,
-});
-const Popup = dynamic(() => import("react-leaflet").then((m) => m.Popup), {
-  ssr: false,
-});
+const Marker = dynamic(() => import("react-leaflet").then((m) => m.Marker));
+const Popup = dynamic(() => import("react-leaflet").then((m) => m.Popup));
 
 const markers = [
   {
