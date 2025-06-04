@@ -8,7 +8,7 @@ const page = ({
   imageSrc, 
   reverse = false 
 }) => {
-  console.log('description', description)
+
   return (
     <section
       className={` py-14 lg:py-20 2xl:py-100 bg-opacity-25 ${

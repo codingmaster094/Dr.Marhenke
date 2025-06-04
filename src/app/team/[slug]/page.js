@@ -249,7 +249,7 @@ const page = async ({ params }) => {
   };
 
   const post = getPostBySlug(slug);
-  console.log('post', post)
+
   return (
     <>
       <Hero_Section
